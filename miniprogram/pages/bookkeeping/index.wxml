@@ -1,0 +1,58 @@
+<view class="page">
+  <view wx:if="{{!goodsList.length}}" class="card empty-card">
+    <view class="empty-title">还没有可记账商品</view>
+    <view class="empty-desc">请先去商品管理创建商品明细、单价和单位</view>
+    <button class="btn primary" bindtap="goGoodsPage">去商品管理</button>
+  </view>
+
+  <block wx:else>
+    <view class="card form-card">
+      <view class="card-title">记一笔账</view>
+
+      <view class="field">
+        <view class="label">选择商品</view>
+        <picker mode="selector" value="{{selectedGoodsIndex}}" range="{{goodsList}}" range-key="name" bindchange="onGoodsChange">
+          <view class="picker-view">{{selectedGoodsName}}</view>
+        </picker>
+      </view>
+
+      <view class="field">
+        <view class="label">数量</view>
+        <input class="input" type="digit" value="{{quantity}}" bindinput="onQuantityInput" placeholder="请输入数量" />
+      </view>
+
+      <view class="field">
+        <view class="label">备注（可选）</view>
+        <input class="input" value="{{remark}}" bindinput="onRemarkInput" placeholder="例如：散客、团购" />
+      </view>
+
+      <view class="amount-box">本笔金额：￥{{currentAmount}}</view>
+      <button class="btn primary" bindtap="addRecord">确认记账</button>
+    </view>
+
+    <view class="card list-card">
+      <view class="list-head">
+        <view class="card-title">记账记录</view>
+        <view class="total">合计：￥{{totalAmount}}</view>
+      </view>
+
+      <view wx:if="{{!records.length}}" class="empty">暂无记录</view>
+
+      <view wx:for="{{records}}" wx:key="id" class="record-item">
+        <view class="row between">
+          <view class="record-name">{{item.goodsName}}</view>
+          <view class="record-amount">￥{{item.amount}}</view>
+        </view>
+        <view class="record-meta">
+          {{item.quantity}}{{item.unit}} x ￥{{item.price}} · {{item.createdAtText}}
+        </view>
+        <view wx:if="{{item.remark}}" class="record-remark">备注：{{item.remark}}</view>
+        <view class="row right">
+          <text class="text-btn danger" data-id="{{item.id}}" bindtap="onDeleteRecord">删除</text>
+        </view>
+      </view>
+
+      <button wx:if="{{records.length}}" class="btn" bindtap="clearRecords">清空全部记录</button>
+    </view>
+  </block>
+</view>

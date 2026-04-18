@@ -1,0 +1,133 @@
+page {
+  background: #eef5ef;
+}
+
+.page {
+  padding: 24rpx;
+  font-family: PingFang SC;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 18rpx;
+}
+
+.card-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1f1f1f;
+  margin-bottom: 20rpx;
+}
+
+.invite-desc {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 14rpx;
+}
+
+.invite-path {
+  margin-top: 14rpx;
+  font-size: 22rpx;
+  color: #7a7a7a;
+  background: #f6faf6;
+  padding: 12rpx;
+  border-radius: 8rpx;
+  word-break: break-all;
+}
+
+.mini-btn {
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  border-radius: 8rpx;
+}
+
+.field {
+  margin-bottom: 18rpx;
+}
+
+.label {
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 8rpx;
+}
+
+.input {
+  background: #f6f6f6;
+  border-radius: 10rpx;
+  padding: 18rpx;
+  font-size: 28rpx;
+}
+
+.action-row {
+  margin-top: 8rpx;
+  display: flex;
+  gap: 16rpx;
+}
+
+.btn {
+  flex: 1;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+}
+
+.primary {
+  background: #1f9d3a;
+  color: #fff;
+}
+
+.empty {
+  font-size: 26rpx;
+  color: #888;
+  padding: 24rpx 0;
+}
+
+.customer-item {
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #ededed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.customer-item:last-child {
+  border-bottom: none;
+}
+
+.customer-name {
+  font-size: 30rpx;
+  color: #111;
+  font-weight: 500;
+}
+
+.customer-phone {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #6f6f6f;
+}
+
+.source-tag {
+  margin-top: 8rpx;
+  display: inline-block;
+  padding: 4rpx 10rpx;
+  border-radius: 16rpx;
+  font-size: 22rpx;
+  color: #1f7f34;
+  background: #e8f5e9;
+}
+
+.item-actions {
+  display: flex;
+  gap: 20rpx;
+}
+
+.text-btn {
+  color: #1f9d3a;
+  font-size: 26rpx;
+}
+
+.text-btn.danger {
+  color: #cc4d33;
+}

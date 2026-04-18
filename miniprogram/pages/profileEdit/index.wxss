@@ -1,0 +1,79 @@
+page {
+  background: #eef5ef;
+}
+
+.page {
+  padding: 40rpx 24rpx;
+  font-family: PingFang SC;
+}
+
+.avatar-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40rpx;
+}
+
+.avatar-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  line-height: 1;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  display: block;
+  margin-bottom: 12rpx;
+}
+
+.avatar-edit-hint {
+  font-size: 22rpx;
+  color: #1f9d3a;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 0 24rpx;
+  margin-bottom: 40rpx;
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  padding: 28rpx 0;
+}
+
+.field-label {
+  font-size: 28rpx;
+  color: #666;
+  width: 120rpx;
+  flex-shrink: 0;
+}
+
+.field-input {
+  flex: 1;
+  font-size: 28rpx;
+  color: #111;
+  text-align: right;
+}
+
+.save-btn {
+  width: 100%;
+  background: #1f9d3a;
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 50rpx;
+  height: 88rpx;
+  line-height: 1;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

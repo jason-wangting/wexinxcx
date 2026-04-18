@@ -1,0 +1,103 @@
+page {
+  background: #eef5ef;
+}
+
+.page {
+  padding: 24rpx;
+  font-family: PingFang SC;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 22rpx;
+  margin-bottom: 18rpx;
+}
+
+.label {
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 8rpx;
+}
+
+.picker-view {
+  background: #f6f6f6;
+  border-radius: 10rpx;
+  padding: 16rpx;
+  font-size: 28rpx;
+}
+
+.date-row {
+  margin-top: 14rpx;
+}
+
+.mt {
+  margin-top: 12rpx;
+}
+
+.summary-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-item {
+  width: 48%;
+  background: #f6faf6;
+  border-radius: 12rpx;
+  padding: 20rpx;
+}
+
+.summary-label {
+  font-size: 24rpx;
+  color: #7a7a7a;
+}
+
+.summary-value {
+  margin-top: 10rpx;
+  font-size: 34rpx;
+  color: #1f9d3a;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #111;
+}
+
+.empty {
+  font-size: 25rpx;
+  color: #8a8a8a;
+  padding: 20rpx 0;
+}
+
+.rank-item {
+  margin-top: 14rpx;
+  padding-bottom: 14rpx;
+  border-bottom: 1rpx solid #ededed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rank-item:last-child {
+  border-bottom: none;
+}
+
+.goods-name {
+  font-size: 29rpx;
+  color: #111;
+  font-weight: 500;
+}
+
+.goods-meta {
+  margin-top: 6rpx;
+  font-size: 23rpx;
+  color: #7f7f7f;
+}
+
+.amount {
+  font-size: 30rpx;
+  color: #111;
+  font-weight: 600;
+}

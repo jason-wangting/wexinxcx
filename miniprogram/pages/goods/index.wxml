@@ -1,0 +1,42 @@
+<view class="page">
+  <view class="card form-card">
+    <view class="card-title">{{editId ? '编辑商品' : '新增商品'}}</view>
+
+    <view class="field">
+      <view class="label">商品名称</view>
+      <input class="input" placeholder="例如：膏蟹" value="{{formName}}" bindinput="onNameInput" />
+    </view>
+
+    <view class="field">
+      <view class="label">单价</view>
+      <input class="input" type="digit" placeholder="例如：12.5" value="{{formPrice}}" bindinput="onPriceInput" />
+    </view>
+
+    <view class="field">
+      <view class="label">单位</view>
+      <input class="input" placeholder="例如：斤 / 公斤 / 筐" value="{{formUnit}}" bindinput="onUnitInput" />
+    </view>
+
+    <view class="action-row">
+      <button class="btn primary" bindtap="submitGoods">{{editId ? '保存修改' : '添加商品'}}</button>
+      <button class="btn" bindtap="resetForm">清空</button>
+    </view>
+  </view>
+
+  <view class="card list-card">
+    <view class="card-title">商品列表</view>
+
+    <view wx:if="{{!goodsList.length}}" class="empty">暂无商品，请先添加商品</view>
+
+    <view wx:for="{{goodsList}}" wx:key="id" class="goods-item">
+      <view>
+        <view class="goods-name">{{item.name}}</view>
+        <view class="goods-meta">￥{{item.price}} / {{item.unit}}</view>
+      </view>
+      <view class="item-actions">
+        <text class="text-btn" data-id="{{item.id}}" bindtap="onEditGoods">编辑</text>
+        <text class="text-btn danger" data-id="{{item.id}}" bindtap="onDeleteGoods">删除</text>
+      </view>
+    </view>
+  </view>
+</view>

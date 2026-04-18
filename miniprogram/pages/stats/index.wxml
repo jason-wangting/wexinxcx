@@ -1,0 +1,51 @@
+<view class="page">
+  <view class="card filter-card">
+    <view class="label">统计方式</view>
+    <picker mode="selector" range="{{modeOptions}}" value="{{modeIndex}}" bindchange="onModeChange">
+      <view class="picker-view">{{modeOptions[modeIndex]}}</view>
+    </picker>
+
+    <view wx:if="{{modeIndex === 1}}" class="date-row">
+      <view class="label">选择日期</view>
+      <picker mode="date" value="{{singleDate}}" bindchange="onSingleDateChange">
+        <view class="picker-view">{{singleDate}}</view>
+      </picker>
+    </view>
+
+    <view wx:if="{{modeIndex === 2}}" class="date-row">
+      <view class="label">开始日期</view>
+      <picker mode="date" value="{{startDate}}" bindchange="onStartDateChange">
+        <view class="picker-view">{{startDate}}</view>
+      </picker>
+
+      <view class="label mt">结束日期</view>
+      <picker mode="date" value="{{endDate}}" bindchange="onEndDateChange">
+        <view class="picker-view">{{endDate}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="card summary-card">
+    <view class="summary-item">
+      <view class="summary-label">总笔数</view>
+      <view class="summary-value">{{totalCount}}</view>
+    </view>
+    <view class="summary-item">
+      <view class="summary-label">总金额</view>
+      <view class="summary-value">￥{{totalAmount}}</view>
+    </view>
+  </view>
+
+  <view class="card rank-card">
+    <view class="title">商品统计</view>
+    <view wx:if="{{!byGoods.length}}" class="empty">当前筛选条件下暂无数据</view>
+
+    <view wx:for="{{byGoods}}" wx:key="name" class="rank-item">
+      <view>
+        <view class="goods-name">{{item.name}}</view>
+        <view class="goods-meta">{{item.category}} · {{item.count}}笔 · 数量{{item.quantity}}</view>
+      </view>
+      <view class="amount">￥{{item.amountText}}</view>
+    </view>
+  </view>
+</view>

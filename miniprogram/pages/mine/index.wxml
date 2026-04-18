@@ -1,0 +1,90 @@
+<view class="page">
+
+  <!-- ===== 未登录：登录入口 ===== -->
+  <view wx:if="{{!isLoggedIn && !awaitingNickname}}" class="login-screen">
+    <image class="login-logo" src="../../images/icons/avatar.png" mode="aspectFill"></image>
+    <view class="login-title">欢迎使用</view>
+    <view class="login-sub">登录后开始记账管理</view>
+    <button class="login-wx-btn" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+      微信登录
+    </button>
+  </view>
+
+  <!-- ===== 登录中：确认昵称 ===== -->
+  <view wx:elif="{{awaitingNickname}}" class="nickname-screen">
+    <image class="avatar-preview" src="{{avatarUrl}}" mode="aspectFill"></image>
+    <view class="nickname-hint">点击下方选择你的微信昵称</view>
+    <input
+      class="nickname-input"
+      type="nickname"
+      value="{{pendingNickname}}"
+      placeholder="点击填入微信昵称"
+      focus="{{awaitingNickname}}"
+      bindinput="onNicknameInput"
+      bindconfirm="onNicknameConfirm"
+    />
+    <button class="confirm-btn" bindtap="finishLogin">完成登录</button>
+  </view>
+
+  <!-- ===== 已登录：个人信息 ===== -->
+  <view wx:else>
+    <view class="card profile-row" bindtap="goEditProfile">
+      <view class="profile-left">
+        <image class="avatar" src="{{avatarUrl}}"></image>
+        <view class="user-name">{{userName}}</view>
+        <view class="arrow">›</view>
+      </view>
+      <view class="member-tag">{{roleText}}</view>
+    </view>
+
+    <view wx:if="{{!role}}" class="card role-pick-card">
+      <view class="role-pick-title">请选择当前身份</view>
+      <view class="role-pick-sub">登录后可在这里切换买家/卖家</view>
+      <view class="role-pick-actions">
+        <button class="role-btn seller" data-role="seller" bindtap="onSelectRole">我是卖家</button>
+        <button class="role-btn buyer" data-role="buyer" bindtap="onSelectRole">我是买家</button>
+      </view>
+    </view>
+
+    <view wx:else class="card role-switch-card">
+      <view class="row role-switch-row">
+        <view class="label">当前身份</view>
+        <view class="role-switch-group">
+          <view
+            class="role-chip {{role === 'seller' ? 'active' : ''}}"
+            data-role="seller"
+            bindtap="onSwitchRole"
+          >卖家</view>
+          <view
+            class="role-chip {{role === 'buyer' ? 'active' : ''}}"
+            data-role="buyer"
+            bindtap="onSwitchRole"
+          >买家</view>
+        </view>
+      </view>
+
+      <view wx:if="{{role === 'seller'}}" class="row">
+        <view class="label">会员类别</view>
+        <view class="value">{{memberType}}</view>
+      </view>
+      <view wx:if="{{role === 'seller'}}" class="row">
+        <view class="label">会员到期</view>
+        <view class="value">{{memberExpireText}}</view>
+      </view>
+
+      <view wx:if="{{role === 'buyer'}}" class="row">
+        <view class="label">买家身份</view>
+        <view class="value">普通买家</view>
+      </view>
+      <view wx:if="{{role === 'buyer'}}" class="row">
+        <view class="label">买家编号</view>
+        <view class="value">{{buyerIdText}}</view>
+      </view>
+
+      <view class="row logout-row" bindtap="logout">
+        <view class="label logout-label">退出登录</view>
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,67 @@
+page {
+  background: #eef5ef;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 24rpx;
+  box-sizing: border-box;
+  font-family: PingFang SC;
+}
+
+.card {
+  margin-top: 40rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+}
+
+.title {
+  font-size: 34rpx;
+  color: #111;
+  font-weight: 600;
+}
+
+.desc {
+  margin-top: 12rpx;
+  color: #666;
+  font-size: 25rpx;
+  line-height: 1.6;
+}
+
+.field {
+  margin-top: 18rpx;
+}
+
+.label {
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 8rpx;
+}
+
+.input {
+  background: #f6f6f6;
+  border-radius: 10rpx;
+  padding: 18rpx;
+  font-size: 28rpx;
+}
+
+.btn {
+  margin-top: 24rpx;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+}
+
+.primary {
+  background: #1f9d3a;
+  color: #fff;
+}
+
+.success-box {
+  margin-top: 16rpx;
+  background: #e8f5e9;
+  color: #1f7f34;
+  border-radius: 10rpx;
+  padding: 14rpx;
+  font-size: 25rpx;
+}

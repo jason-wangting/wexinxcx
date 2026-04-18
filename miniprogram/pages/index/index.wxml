@@ -1,0 +1,69 @@
+<view class="page">
+  <view class="center-wrap">
+    <view class="add-btn" bindtap="onTapAdd">+</view>
+    <view class="add-text">记一笔</view>
+  </view>
+
+  <view class="today-card">
+    <view class="today-title">今天</view>
+    <view class="today-row">
+      <view class="today-item">
+        <view class="today-label">笔数</view>
+        <view class="today-value">{{todayCount}}</view>
+      </view>
+      <view class="today-item">
+        <view class="today-label">金额</view>
+        <view class="today-value">￥{{todayAmount}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="recent-card">
+    <view class="recent-title">最近记录</view>
+    <view wx:if="{{!recentRecords.length}}" class="empty">暂无记录</view>
+    <view wx:for="{{recentRecords}}" wx:key="id" class="recent-item">
+      <view>
+        <view class="recent-name">{{item.goodsName}}</view>
+        <view class="recent-meta">买家：{{item.customerName || '未设置'}} · {{item.quantity}}{{item.unit}} · {{item.createdAtText}}</view>
+      </view>
+      <view class="recent-amount">￥{{item.amount}}</view>
+    </view>
+  </view>
+
+  <view wx:if="{{showEntryForm}}" class="mask" bindtap="closeEntryForm"></view>
+  <view wx:if="{{showEntryForm}}" class="entry-panel">
+    <view class="panel-title">记一笔</view>
+
+    <view class="field">
+      <view class="label">选择商品</view>
+      <picker mode="selector" value="{{selectedGoodsIndex}}" range="{{goodsOptionTexts}}" bindchange="onGoodsChange">
+        <view class="picker-view">{{goodsOptionTexts[selectedGoodsIndex]}}</view>
+      </picker>
+    </view>
+
+    <view class="field">
+      <view class="label">选择买家</view>
+      <picker mode="selector" value="{{selectedCustomerIndex}}" range="{{customerOptionTexts}}" bindchange="onCustomerChange">
+        <view class="picker-view">{{customerOptionTexts[selectedCustomerIndex]}}</view>
+      </picker>
+    </view>
+
+    <view class="field">
+      <view class="label">数量</view>
+      <input class="input" type="digit" value="{{quantity}}" bindinput="onQuantityInput" placeholder="请输入数量" />
+    </view>
+
+    <view class="field">
+      <view class="label">成交单价</view>
+      <input class="input" type="digit" value="{{entryPrice}}" bindinput="onPriceInput" placeholder="请输入本次单价" />
+      <view class="price-tip">建议单价：￥{{suggestedPrice}}</view>
+    </view>
+
+    <view class="amount">金额：￥{{currentAmount}}</view>
+
+    <view class="btn-row">
+      <button class="btn" bindtap="closeEntryForm">取消</button>
+      <button class="btn primary" bindtap="submitRecord">保存</button>
+    </view>
+  </view>
+</view>

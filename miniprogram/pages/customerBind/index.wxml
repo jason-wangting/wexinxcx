@@ -1,0 +1,20 @@
+<view class="page">
+  <view class="card">
+    <view class="title">商家邀请你成为买家</view>
+    <view class="desc">点击确认后，你将被添加到商家客户列表中</view>
+
+    <view class="field">
+      <view class="label">你的称呼（可选）</view>
+      <input class="input" placeholder="例如：李女士" value="{{name}}" bindinput="onNameInput" />
+    </view>
+
+    <view class="field">
+      <view class="label">联系电话（可选）</view>
+      <input class="input" type="number" placeholder="例如：13800000000" value="{{phone}}" bindinput="onPhoneInput" />
+    </view>
+
+    <button class="btn primary" bindtap="submitBind" loading="{{submitting}}">确认绑定</button>
+
+    <view wx:if="{{bindDone}}" class="success-box">{{bindMsg}}</view>
+  </view>
+</view>

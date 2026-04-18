@@ -1,0 +1,146 @@
+page {
+  background: #f3f7f3;
+}
+
+.page {
+  padding: 24rpx;
+  font-family: PingFang SC;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 18rpx;
+}
+
+.card-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.field {
+  margin-top: 18rpx;
+}
+
+.label {
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 8rpx;
+}
+
+.input,
+.picker-view {
+  background: #f6f6f6;
+  border-radius: 10rpx;
+  padding: 18rpx;
+  font-size: 28rpx;
+}
+
+.amount-box {
+  margin: 20rpx 0;
+  background: #e8f5e9;
+  color: #1f7f34;
+  border-radius: 10rpx;
+  padding: 16rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.btn {
+  width: 100%;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+}
+
+.primary {
+  background: #1f9d3a;
+  color: #fff;
+}
+
+.empty-card {
+  text-align: center;
+  padding: 40rpx 24rpx;
+}
+
+.empty-title {
+  font-size: 34rpx;
+  color: #222;
+  font-weight: 600;
+}
+
+.empty-desc {
+  font-size: 26rpx;
+  color: #666;
+  margin: 16rpx 0 28rpx;
+  line-height: 1.6;
+}
+
+.list-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.total {
+  font-size: 28rpx;
+  color: #1f7f34;
+  font-weight: 600;
+}
+
+.empty {
+  font-size: 26rpx;
+  color: #888;
+  padding: 22rpx 0;
+}
+
+.record-item {
+  border-bottom: 1rpx solid #ededed;
+  padding: 20rpx 0;
+}
+
+.record-item:last-child {
+  border-bottom: none;
+}
+
+.row {
+  display: flex;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.record-name {
+  font-size: 30rpx;
+  color: #111;
+  font-weight: 500;
+}
+
+.record-amount {
+  font-size: 30rpx;
+  color: #111;
+  font-weight: 600;
+}
+
+.record-meta,
+.record-remark {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.text-btn {
+  margin-top: 10rpx;
+  color: #1f9d3a;
+  font-size: 26rpx;
+}
+
+.text-btn.danger {
+  color: #cc4d33;
+}

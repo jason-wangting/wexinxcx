@@ -1,0 +1,192 @@
+page {
+  background: #eef5ef;
+}
+
+.page {
+  padding: 28rpx;
+  font-family: PingFang SC;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.center-wrap {
+  margin-top: 120rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-btn {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 96rpx;
+  color: #fff;
+  background: linear-gradient(135deg, #1f9d3a, #50b768);
+  box-shadow: 0 16rpx 30rpx rgba(31, 157, 58, 0.28);
+}
+
+.add-text {
+  margin-top: 20rpx;
+  font-size: 34rpx;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.today-card,
+.recent-card {
+  margin-top: 28rpx;
+  background: #fff;
+  border-radius: 18rpx;
+  padding: 22rpx;
+}
+
+.today-title,
+.recent-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #191919;
+}
+
+.today-row {
+  margin-top: 18rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.today-item {
+  width: 48%;
+  background: #f6faf6;
+  border-radius: 12rpx;
+  padding: 20rpx;
+}
+
+.today-label {
+  font-size: 24rpx;
+  color: #7c7c7c;
+}
+
+.today-value {
+  margin-top: 8rpx;
+  font-size: 36rpx;
+  color: #1f9d3a;
+  font-weight: 600;
+}
+
+.empty {
+  font-size: 25rpx;
+  color: #888;
+  padding: 20rpx 0;
+}
+
+.recent-item {
+  margin-top: 14rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14rpx;
+  border-bottom: 1rpx solid #efefef;
+}
+
+.recent-item:last-child {
+  border-bottom: none;
+}
+
+.recent-name {
+  font-size: 29rpx;
+  color: #111;
+}
+
+.recent-meta {
+  margin-top: 6rpx;
+  font-size: 23rpx;
+  color: #7f7f7f;
+}
+
+.recent-amount {
+  font-size: 29rpx;
+  color: #111;
+  font-weight: 600;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 10;
+}
+
+.entry-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 84%;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 26rpx;
+  z-index: 11;
+}
+
+.panel-title {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #131313;
+}
+
+.field {
+  margin-top: 16rpx;
+}
+
+.label {
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 8rpx;
+}
+
+.picker-view,
+.input {
+  font-size: 28rpx;
+  background: #f7f7f7;
+  border-radius: 10rpx;
+  padding: 16rpx;
+}
+
+.price-tip {
+  margin-top: 8rpx;
+  font-size: 23rpx;
+  color: #7c7c7c;
+}
+
+.amount {
+  margin-top: 18rpx;
+  background: #e8f5e9;
+  color: #1f7f34;
+  border-radius: 10rpx;
+  padding: 14rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.btn-row {
+  margin-top: 18rpx;
+  display: flex;
+  gap: 14rpx;
+}
+
+.btn {
+  flex: 1;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+}
+
+.primary {
+  background: #1f9d3a;
+  color: #fff;
+}
